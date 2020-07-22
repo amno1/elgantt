@@ -79,7 +79,8 @@
 
 ;;;; Requirements
 
-(require 'cl-lib)
+(eval-when-compile (require 'cl-lib))
+;;(require 'cl-lib)
 (require 'color)
 (require 'org)
 (require 'org-clock)
@@ -339,9 +340,9 @@ if this is set to nil.")
 	  elgantt-timestamp-range-ia-start-character
 	  "]")
   "List of display characters for use as a regexp for finding entries.")
-
+(eval-and-compile
 (defconst elgantt-vertical-line-char "|"
-  "Character used to draw lines between dates.")
+  "Character used to draw lines between dates."))
 
 (defmacro elgantt--add-vertical-line-props (lines)
   "Place vertical line text properties."
