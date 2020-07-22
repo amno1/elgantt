@@ -377,7 +377,7 @@ symbol."
                   (substring (symbol-name symbol)
                              substring-start substring-end)
                   suffix)))
-(eval-when-compile
+(eval-and-compile
   (defun elgantt--add-remove-prop-colon (prop &optional remove)
     "PROP is a symbol with or without a colon prefix.
 Returns a symbol with a colon prefix. If REMOVE is t,
