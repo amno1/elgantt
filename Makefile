@@ -41,7 +41,8 @@ install-native: native
 install-all: install install-native
 
 uninstall:
-	rm -f $(DESTDIR)$(PREFIX)/lisp/elgantt-*
+	rm -f $(DESTDIR)$(PREFIX)/lisp/elgantt.*
+	rm -f $(DESTDIR)$(PREFIX)/lisp/elgantt-*.*
 	rm -f $(DESTDIR)$(PREFIX)/lisp/eln-*/elgantt-*
 
 clean:
